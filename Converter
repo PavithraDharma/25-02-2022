@@ -1,0 +1,33 @@
+//Decimal to binary converter
+
+import java.util.Scanner;
+import java.io.*;
+
+//your code goes here
+public class Converter
+{
+    public void toBinary(int num)
+    {
+        int[]bin=new int[1000];int i=0;
+        while(num>0)
+        {
+            bin[i]=num%2;
+            num=num/2;
+            i++;
+        }
+        for(int j=i-1;j>=0;j--)
+        {
+            System.out.print(bin[j]);
+        }
+    }
+}
+
+public class Program{
+    public static void main(String[ ] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        Converter obj=new Converter();
+        obj.toBinary(num);
+    }
+}
+

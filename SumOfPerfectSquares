@@ -1,0 +1,21 @@
+// find sum of the perfect squares between given  number
+import java.util.Scanner;
+class SumOfPerfectSquares {
+    public static void main(String[] args) {
+        int num1,num2;
+        int sum=0;
+        Scanner scan=new Scanner(System.in);
+        num1=scan.nextInt();
+        num2=scan.nextInt();
+        for(int i=num1;i<num2;i++)
+        {
+          int per=i*i;
+          if(per>num1 && per<num2)
+          {
+              sum=sum+per;
+          }
+        }
+        System.out.println(sum);
+        scan.close();
+    }
+}
